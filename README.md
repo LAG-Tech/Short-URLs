@@ -2,7 +2,7 @@
 
 ## Descrição
 
-O projeto Short-URLs é uma aplicação web que permite aos usuários encurtarem URLs longas e compartilhá-las de forma mais conveniente. Com apenas alguns cliques, você pode transformar URLs complexas em links curtos e fáceis de lembrar. Além disso, o projeto também oferece estatísticas básicas sobre o número de cliques em cada URL encurtada, fornecendo insights úteis sobre o desempenho das suas URLs compartilhadas.
+O projeto [Short-URLs](https://adriellison.github.io/Short-URLs/) é uma aplicação web que permite aos usuários encurtarem URLs longas e compartilhá-las de forma mais conveniente. Com apenas alguns cliques, você pode transformar URLs complexas em links curtos e fáceis de lembrar. Além disso, o projeto também oferece estatísticas básicas sobre o número de cliques em cada URL encurtada, fornecendo insights úteis sobre o desempenho das suas URLs compartilhadas.
 
 ## Tecnologias
 
@@ -29,6 +29,7 @@ O Short-URLs foi desenvolvido pela seguinte equipe:
 ## Links
 
 - [Repositório do GitHub](https://github.com/adriellison/Short-URLs)
+- [URL do Projeto](https://adriellison.github.io/Short-URLs/)
 
 ## Recomendações Adicionais
 
