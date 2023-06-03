@@ -5,12 +5,22 @@
         <title>Lag - Encurtador de Url</title>
         <link rel="shortcut icon" href="src/Images/LogoLag.svg" />
         <link rel="stylesheet" type="text/css" href="src/css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     </head>
     <body>
         <h1>Minha Página</h1>
+        <div style="margin-left:25%;width: 50%;">
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">URL</span>
+                <input type="text" id="url" class="form-control" placeholder="Insira a Ulr a ser encurtada" aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
+            <div style="text-align: center;margin-top: 2%;">
+                <button onclick="shortenUrls()" class="btn btn-primary btn-lg">Encurtar</button>
+                <button onclick="copyUrl()" class="btn btn-warning btn-lg">Copiar</button>
+            </div>
+        </div>
         
-        <input type="text" id="url">
-        <button onclick="shortenUrls()">Clique aqui</button>
         
         <!-- Scrpts-->
         <script src="src/js/app.js"></script>
