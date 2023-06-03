@@ -9,21 +9,28 @@
 
     </head>
     <body>
-        <h1>Minha Página</h1>
-        <div style="margin-left:25%;width: 50%;">
-            <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">URL</span>
-                <input type="text" id="url" class="form-control" placeholder="Insira a Ulr a ser encurtada" aria-label="Username" aria-describedby="addon-wrapping">
+		<header>
+			<div class="logo">
+				<img src="./src/Images/LOGO_URL_SHORTCUTS.svg" alt="LOGO_URL_SHORTCUTS">
+			</div>
+		</header>
+        <main>
+            <div class="input-container">
+				<input type="text" id="url" class="input" placeholder="Insira a url a ser encurtada"/>
+				<span title="copiar url" class="copy"  onclick="copyUrl()"><i id="copy" class="fa-regular fa-clone"></i></span>
             </div>
-            <div style="text-align: center;margin-top: 2%;">
-                <button onclick="shortenUrls()" class="btn btn-primary btn-lg">Encurtar</button>
-                <button onclick="copyUrl()" class="btn btn-warning btn-lg">Copiar</button>
+            <div class="button-container">
+                <button onclick="shortenUrls()" class="button">Encurtar</button>
             </div>
-        </div>
-        
-        
-        <!-- Scrpts-->
-        <script src="src/js/app.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        </main>
+        <footer>
+			<div class="footer">
+				<p>© 2019 - 2021 lagcompany.com</p> <!-- Linkar a home da lag -->
+			</div>
+		</footer>
     </body>
+	<!-- Scrpts-->
+	<script src="https://kit.fontawesome.com/fcfce43a04.js" crossorigin="anonymous"></script>
+	<script src="src/js/app.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </html>

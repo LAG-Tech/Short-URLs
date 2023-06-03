@@ -12,6 +12,13 @@ O Short-URLs foi desenvolvido utilizando as seguintes tecnologias:
 - **CSS** - uma linguagem de estilo para aprimorar o design das páginas da web.
 - **JavaScript** - uma linguagem de programação que adiciona interatividade às páginas da web.
 
+## Screenshots
+
+Aqui estão algumas capturas de tela do projeto:
+
+![Screenshot 1](./screenshot.png)
+
+
 ## Equipe
 
 O Short-URLs foi desenvolvido pela seguinte equipe:

@@ -25,13 +25,24 @@ function shortenUrls(){
     }
     });
 }
+
 function copyUrl(){
     
     const url = document.getElementById("url");
+
+	$("#copy").removeClass("fa-clone").addClass("fa-check");
+	
+	sleep(1000).then(() => {
+		$("#copy").removeClass("fa-check").addClass("fa-clone");
+	});
     
     url.select();
 
     document.execCommand("copy");
 
     url.setSelectionRange(0, 0);
+}
+
+function sleep(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
 }
