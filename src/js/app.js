@@ -1,6 +1,13 @@
 function shortenUrls(){
     
     const url = document.getElementById("url").value;
+
+    if(!url){
+        $.notify("Insira uma url", {
+            className: 'error',
+            position: 'top center'
+          });
+    }
     
     let requestHeaders = {
         "Content-Type": "application/json",
@@ -18,10 +25,20 @@ function shortenUrls(){
     data: JSON.stringify(linkRequest),
     headers: requestHeaders,
     dataType: "json",
+    error: 
+        $.notify("URL infromada fora do padrão", {
+            className: 'error',
+            position: 'top center'
+        }),
     success: (link) => {
         console.log(`Long URL was ${link.destination}, short URL is ${link.shortUrl}`);
         let newUrl = document.getElementById("url");
         newUrl.value = link.shortUrl;
+
+        $.notify("URL Encurtada", {
+            className: 'info',
+            position: 'top center'
+          });
     }
     });
 }
@@ -30,7 +47,20 @@ function copyUrl(){
     
     const url = document.getElementById("url");
 
+    if(!url.value){
+        $.notify("Insira uma url", {
+            className: 'error',
+            position: 'top center'
+          });
+          return;
+    }
+
 	$("#copy").removeClass("fa-clone").addClass("fa-check");
+
+    $.notify("URL copiada", {
+        className: 'success',
+        position: 'top center'
+      });
 	
 	sleep(1000).then(() => {
 		$("#copy").removeClass("fa-check").addClass("fa-clone");
