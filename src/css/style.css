@@ -46,6 +46,10 @@ main {
 	outline: none;
 }
 
+.input-container .input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 1000px white inset !important;
+	border: none !important;
+  }
 
 .button {
 	border: 1px solid #000;
