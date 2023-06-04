@@ -23,8 +23,8 @@ Aqui estão algumas capturas de tela do projeto:
 
 O Short-URLs foi desenvolvido pela seguinte equipe:
 
-- [Adriellison Ferreira](https://github.com/adriellison/) - Dev. Back-End & Designer de UI/UX
-- [Saulo Lohan](https://github.com/Saulohan/) - Dev. Full-Stack
+- [Adriellison Ferreira](https://github.com/adriellison/) - Desenvolvedor Back-End & Designer de UI/UX
+- [Saulo Lohan](https://github.com/Saulohan/) - Desenvolvedor Full-Stack
 
 ## Links
 
