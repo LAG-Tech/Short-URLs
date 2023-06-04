@@ -6,41 +6,43 @@ function shortenUrls(){
         $.notify("Insira uma url", {
             className: 'error',
             position: 'top center'
-          });
-    }
-    
-    let requestHeaders = {
-        "Content-Type": "application/json",
-        "apiKey": "82205f4a81384d89bb0c510ca455b16f"
+        });
+        return;
     }
 
-    let linkRequest = {
-        destination: url,
-        domain: { fullName: "rebrand.ly" }
-    }
-      
     $.ajax({
-    url: "https://api.rebrandly.com/v1/links",
-    type: "POST",
-    data: JSON.stringify(linkRequest),
-    headers: requestHeaders,
-    dataType: "json",
-    error: 
-        $.notify("URL infromada fora do padrão", {
-            className: 'error',
-            position: 'top center'
-        }),
-    success: (link) => {
-        console.log(`Long URL was ${link.destination}, short URL is ${link.shortUrl}`);
-        let newUrl = document.getElementById("url");
-        newUrl.value = link.shortUrl;
+        url: "https://is.gd/create.php",
+        dataType: "jsonp",
+        data: {
+          url: url,
+          format: "json"
+        },
+        error: function() {
+            $.notify("Erro ao gerar link", {
+                className: 'error',
+                position: 'top center'
+            }); 
+        },
+        success: function(data) {
+            let newUrl = document.getElementById("url");
+            newUrl.value = data.shorturl;
 
-        $.notify("URL Encurtada", {
-            className: 'info',
-            position: 'top center'
-          });
-    }
-    });
+            if(newUrl.value == "undefined"){
+                $.notify("URL infromada fora do padrão", {
+                    className: 'error',
+                    position: 'top center'
+                });
+                newUrl.value = "";
+                return;
+            }
+    
+            $.notify("URL Encurtada", {
+                className: 'info',
+                position: 'top center'
+            });           
+        }
+      });
+      
 }
 
 function copyUrl(){
@@ -51,8 +53,8 @@ function copyUrl(){
         $.notify("Insira uma url", {
             className: 'error',
             position: 'top center'
-          });
-          return;
+        });
+        return;
     }
 
 	$("#copy").removeClass("fa-clone").addClass("fa-check");
